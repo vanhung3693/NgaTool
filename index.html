@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<title>Contact V4</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/google_connection.js"></script>
+</head>
+<body>
+
+
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+					Note Candidate
+				</span>
+
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Họ và Tên</span>
+					<input class="input100" type="text" name="name" placeholder="Nhập họ và tên ứng viên">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input date-format">
+					<span class="label-input100">Ngày Sinh</span>
+					<input class="input100" type="text" placeholder="Nhập ngày sinh">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Số Điện Thoại</span>
+					<input class="input100" type="number" name="phoneNumber" placeholder="Nhập Số Điện Thoại">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Email</span>
+					<input class="input100" type="email" name="email" placeholder="Nhập Email">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input">
+					<span class="label-input100">Link Profile</span>
+					<input class="input100" type="text" name="" placeholder="Nhập Link Profile">
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Needed Services</span>
+					<div>
+						<select class="selection-2" name="service">
+							<option>Choose Services</option>
+							<option>Online Store</option>
+							<option>eCommerce Bussiness</option>
+							<option>UI/UX Design</option>
+							<option>Online Services</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 input100-select">
+					<span class="label-input100">Budget</span>
+					<div>
+						<select class="selection-2" name="budget">
+							<option>Select Budget</option>
+							<option>1500 $</option>
+							<option>2000 $</option>
+							<option>2500 $</option>
+						</select>
+					</div>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<span class="label-input100">Message</span>
+					<textarea class="input100" name="message" placeholder="Your message here..."></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn">
+							<span>
+								Submit
+								<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+							</span>
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+<script type="text/javascript">
+//validate date
+    var isShift = false;
+    var seperator = "/";
+    window.onload = function () {
+        //Reference the Table.
+        var tblForm = document.getElementById("tblForm");
+ 
+        //Reference all INPUT elements in the Table.
+        var inputs = document.getElementsByTagName("input");
+ 
+        //Loop through all INPUT elements.
+        for (var i = 0; i < inputs.length; i++) {
+            //Check whether the INPUT element is TextBox.
+            if (inputs[i].type == "text") {
+                //Check whether Date Format Validation is required.
+                if (inputs[i].className.indexOf("date-format") != 1) {
+                       
+                    //Set Max Length.
+                    inputs[i].setAttribute("maxlength", 10);
+ 
+                    //Only allow Numeric Keys.
+                    inputs[i].onkeydown = function (e) {
+                        return IsNumeric(this, e.keyCode);
+                    };
+ 
+                    //Validate Date as User types.
+                    inputs[i].onkeyup = function (e) {
+                        ValidateDateFormat(this, e.keyCode);
+                    };
+                }
+            }
+        }
+    };
+ 
+    function IsNumeric(input, keyCode) {
+        if (keyCode == 16) {
+            isShift = true;
+        }
+        //Allow only Numeric Keys.
+        if (((keyCode >= 48 && keyCode <= 57) || keyCode == 8 || keyCode <= 37 || keyCode <= 39 || (keyCode >= 96 && keyCode <= 105)) && isShift == false) {
+            if ((input.value.length == 2 || input.value.length == 5) && keyCode != 8) {
+                input.value += seperator;
+            }
+ 
+            return true;
+        }
+        else {
+            return false;
+        }
+    };
+ 
+    function ValidateDateFormat(input, keyCode) {
+        var dateString = input.value;
+        if (keyCode == 16) {
+            isShift = false;
+        }
+        var regex = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+ 
+        //Check whether valid dd/MM/yyyy Date Format.
+        if (regex.test(dateString) || dateString.length == 0) {
+            ShowHideError(input, "none");
+        } else {
+            ShowHideError(input, "block");
+        }
+    };
+ 
+    function ShowHideError(textbox, display) {
+        var row = textbox.parentNode.parentNode;
+        var errorMsg = row.getElementsByTagName("span")[0];
+        if (errorMsg != null) {
+            errorMsg.style.display = display;
+        }
+    };
+</script>
+</body>
+</html>
